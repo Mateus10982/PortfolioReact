@@ -1,0 +1,103 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+#embacamento{
+  background-color: rgba(240, 248, 255, 0.51);
+  border-radius: 9%;
+  box-shadow: 2px 2px 4px 2px  rgba(240, 248, 255, 0.51);
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.estilicacaopalavras{
+color: rgb(36, 36, 196);
+}
+.estilicacaopalavras::after{
+  content: ">";
+  color: rgb(196, 36, 36);
+  }
+  .estilicacaopalavras::before{
+    content: "<";
+    color: rgb(107, 184, 0);
+    }
+    /* css da page Home */
+.container {
+  width: 100%;
+  min-height: 81vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container img {
+  height: 500px;
+}
+
+.container p {
+  font-size: 3rem; /* 48px */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.container span {
+  color: var( --secondary);
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-red {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.btn-red:hover {
+  background-color: var(--red);
+}
