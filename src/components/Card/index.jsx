@@ -7,7 +7,7 @@ function Card({ name, description, html_url }) {
     const [ repositories, setRepositories ] = useState([])
     useEffect(() => {
     const buscarLinguagens= async () => {
-        const response1 = await fetch('https://api.github.com/repos/Mateus10982/',{name},'/languages ')
+        const response1 = await fetch(`https://api.github.com/repos/Mateus10982/${name}/languages`)
         const data = await response1.json()
         setRepositories(data)
     }
@@ -18,28 +18,12 @@ function Card({ name, description, html_url }) {
             <h3>{name}</h3>
             <p>{description}</p>
             <div className={styles.card_footer}>
-                <div className={styles.card_icones}> 
-                {
-                for(let i=0 ; i< repositories.length;++i){
-                    if (repositories[i] == "JavaScript") {
-                        
-                    } else if(repositories[i] == "HTML"){
-                        
-                    }
-                    else if(repositories[i] == "CSS"){
-                        
-                    }
-                    else if(repositories[i] == "REACT"){
-                        
-                    }
-                }
-                        
-            }
-                     <FaJs />
-                    <FaHtml5 />
-                    <FaCss3Alt />
-                    <FaReact />
-                </div>
+                <div className={styles.card_icones}>
+  {repositories["JavaScript"] && repositories["JavaScript"] > 0 && <FaJs />}
+  {repositories["HTML"] && repositories["HTML"] > 0 && <FaHtml5 />}
+  {repositories["CSS"] && repositories["CSS"] > 0 && <FaCss3Alt />}
+  {repositories["REACT"] && repositories["REACT"] > 0 && <FaReact />}
+</div>
                 <Link to={html_url} className={styles.botao}>
                     <BsArrowRight />
                 </Link>
