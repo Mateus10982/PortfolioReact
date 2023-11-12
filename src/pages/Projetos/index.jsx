@@ -11,7 +11,7 @@ function Projetos() {    const [ repositories, setRepositories ] = useState([])
         const buscarRepositorios = async () => {
             const response = await fetch('https://api.github.com/users/Mateus10982/repos ')
             const data = await response.json()
-            setRepositories(data)
+                        setRepositories(data)
         }
         buscarRepositorios()
     }, [])
@@ -28,7 +28,7 @@ function Projetos() {    const [ repositories, setRepositories ] = useState([])
                                     key={repo.id}
                                     name={repo.name}
                                     description={repo.description}
-                                    html_url={repo.html_url}
+                                    html_url={repo.homepage}
 
                                 />
                             ))
